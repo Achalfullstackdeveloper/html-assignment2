@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-   
+
     <title>Contact Us - Clothing Store</title>
     <style>
         /* Styling for the body */
@@ -14,7 +14,7 @@
 
         /* Styling for the form container */
         .mean {
-            text-align: center;
+            text-align: left;
             margin: 70px;
             width: 800px;
         }
@@ -28,9 +28,9 @@
 
         /* Style for  phone number */
         .phone-link {
-            position: fixed; 
-            bottom: 10px; 
-            right: 10px; 
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
             font-size: 18px;
             color: white;
             background-color: rgb(0, 128, 0);
@@ -38,8 +38,6 @@
             border-radius: 5px;
             text-decoration: none;
         }
-
-       
     </style>
 </head>
 
@@ -50,33 +48,39 @@
 
             <!-- Title -->
             <h1
-                style="text-align: center; font-size: xx-large;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                style="text-align: center; font-size:40px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:#9B4444 ;">
                 <u><b>ORDER</b></u>
             </h1>
             <!-- Subtitle -->
-            <h2 style="font-size: large;font-style: italic; color: rgb(21, 20, 20); text-align: center;">If you have any
+            <h2 style="font-size:20px;font-style: italic; color:#D04848; text-align: center;">If you have any
                 questions or
                 inquiries, please
                 feel free to contact us<br> using the number given below.</h2>
 
             <!-- First Name input field -->
-            <label class="text-style"><b>First Name </b></label>
+            <label class="text-style"><b>First Name: </b></label>
+            <input class="input-field" type="text" /> </br> </br>
+            <!-- Last Name input field -->
+            <label class="text-style"><b>Last Name :</b></label>
             <input class="input-field" type="text" /> </br> </br>
             <!-- Contact Number input field -->
-            <label class="text-style"><b>Contact Number</b> </label>
+            <label class="text-style"><b>Contact Number:</b> </label>
             <input class="input-field" type="number" /> </br></br>
             <!-- Address input fields -->
-            <label class="text-style"><b>Address:</b></label></label>
-            <input type="text" id="street" name="street" placeholder="Street Address" required><br />
-            <input type="text" id="city" name="city" placeholder="City" required><br />
+            <label class="text-style" ;><b>Address:</b></label></label>
+            <input type="text" id="street" name="street" placeholder="Street Address" required>
+            <input type="text" id="city" name="city" placeholder="City" required>
             <input type="text" id="state" name="state" placeholder="State/Province" required><br><br>
             <input type="text" id="zip" name="zip" placeholder="Postal/ZIP Code" required>
             <input type="text" id="country" name="country" placeholder="Country" required><br><br>
             <!-- Preferred Date and Time input field -->
-            <label for="datetime">Preferred Date and Time:</label>
-            <input type="datetime-local" id="datetime" name="datetime" required>
+            <label class="datetime" style="font-size: 20px;"><b>Preferred Date and Time:</b></label>
+            <input type="datetime-local" id="datetime" name="datetime" required><br><br>
+            <!-- Quantity in kg input field -->
+            <label class="text-style"><b>Quantity :</b></label>
+            <input class="number" type="quantity" required></br></br>
             <!-- Radio buttons for moongfalli type -->
-            <h2 style="text-align: center; text-align: center; font-size: large;"> moongfalli type</h2>
+            <h2 style="text-align: left ; font-size:20px;"> <b>Moongfalli type</b></h2>
             <input class="radio" type="radio" name="Runner" />
             <label class="text-style"> Runner</label><br />
             <input class="radio" type="radio" name="Virgin" />
@@ -91,11 +95,11 @@
             <label class="text-style">others</label><br /><br>
 
             <!--  phone number link -->
-            <a href="tel:+19545966656" class="phone-link">Call us: 954-596-6656</a>
+            <a href="tel:+19545966656" class="phone-link">Call us: 9545966656 , 9545677856</a>
 
         </fieldset>
         <!-- Submit button -->
-        <button style="width: 200px; height: 44px; background-color:rgb(128, 0, 0);font-size: 20px;">
+        <button style="width: 150px; height: 34px; background-color:#FA9884;font-size: 20px;">
             SUBMIT
         </button>
     </form>
