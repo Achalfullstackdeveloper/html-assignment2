@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* CSS styles */
+        body {
+            background-image: url("https://image.slidesdocs.com/responsive-images/background/simple-white-education-pencil-calculator-art-powerpoint-background_644fe4b2ed__960_540.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-container {
+            /* Styling for the main container */
+            width: 25vw;
+            height: 70vh;
+            background-color: #2D9596;
+            border-radius: 2px;
+            border-color: cadetblue;
+            border-style: double;
+            display: flex;
+            flex-direction: column;
+            margin-left: 730px;
+            margin-right: auto;
+            margin-top: 90px;
+            border-radius: 15px;
+            padding: 13px;
+        }
+
+        .top {
+            /* Styling for the top section */
+            width: 580;
+            height: 150px;
+            padding: 5px;
+            font-size: 20px;
+            margin-bottom: 13px;
+            background-color: #9AD0C2;
+            border-radius: 10px;
+        }
+
+        .bottom {
+            /* Styling for the bottom section */
+            width: 580;
+            height: 400px;
+            background-color: #E0F4FF;
+            gap: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .row {
+            /* Styling for rows of buttons */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            /* Styling for buttons */
+            width: 90px;
+            height: 50px;
+            margin: 10px;
+            background: #43766C;
+            color: black;
+            font-size: 32px;
+            font-weight: 600;
+            border: 1px solid grey;
+            outline-offset: 3px;
+            border-radius: 38px;
+        }
+
+        button:hover {
+            /* Styling for button hover state */
+            background-color: #ddd;
+        }
+
+        .operation {
+            /* Styling for operator buttons */
+            background-color: #2D9596;
+        }
+
+        .display {
+            /* Styling for display */
+            font-size: 22px;
+        }
+    </style>
+    <script>
+        // JavaScript functions
+
+        function showNumber(gift) {
+            // Function to display the total and the given gift
+            var a = 0;
+            var b = 0;
+            a = 5;
+            b = 4;
+            var total = a + b;
+
+            document.getElementById("display").innerHTML = total + " .given gift " + gift;
+        }
+
+        function clearFunction(clear) {
+            // Function to clear the display
+            a = 0;
+
+            document.getElementById("display").innerHTML = a;
+        }
+    </script>
+    <title>CALCULATOR</title>
+</head>
+
+<body>
+    <!-- Main section -->
+    <div class="main-container">
+        <!-- Top section -->
+        <div class="top">
+            <!-- Display -->
+            <h1 type="text" id="display" value="" style="font-size:20px;"></h1>
+        </div>
+        <!-- Bottom section -->
+        <div class="bottom">
+            <!-- Rows of buttons -->
+            <div class="row">
+                <!-- Calculator buttons -->
+                <button id="Ac" type="button" class="operation" onclick="clearFunction('clear')">AC</button>
+                <button id="Del" type="button" class="operation" onclick="Backspace()">DEL</button>
+                <button id="%" type="button" class="operation" onclick="percentage()">%</button>
+                <button id="/" type="button" class="operation" onclick="div()">÷</button>
+            </div>
+            <div class="row">
+                <button id="7" type="button" onclick="numberType(7)">7</button>
+                <button id="8" type="button" onclick="numberType(8)">8</button>
+                <button id="9" type="button" onclick="numberType(9)">9</button>
+                <button id="*" type="button" class="operation" onclick="multiplication()">x</button>
+            </div>
+            <div class="row">
+                <button id="4" type="button" onclick="numberType(4)">4</button>
+                <button id="5" type="button" onclick="numberType(5)">5</button>
+                <button id="6" type="button" onclick="numberType(6)">6</button>
+                <button id="+" type="button" class="operation" onclick="add()">+</button>
+            </div>
+            <div class="row">
+                <button id="1" type="button" onclick="numberType(1)">1</button>
+                <button id="2" type="button" onclick="numberType(2)">2</button>
+                <button id="3" type="button" onclick="numberType(3)">3</button>
+                <button id="-" type="button" class="operation" onclick="sub()">-</button>
+            </div>
+            <div class="row">
+                <button id="=/-" type="button" onclick="numberType()">+/-</button>
+                <button id="0" type="button" onclick="numberType(0)">0</button>
+                <button id="." type="button" onclick="numberType('.')">.</button>
+                <button id="=" type="button" class="operation" onclick="showNumber('gift')">=</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
