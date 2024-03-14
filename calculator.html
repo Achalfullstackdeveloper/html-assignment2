@@ -68,8 +68,8 @@
             border-radius: 38px;
         }
 
-        button {
-            /* Styling for button */
+        button:hover {
+            /* Styling for buttn */
             background-color: #ddd;
         }
 
@@ -84,9 +84,9 @@
         }
     </style>
     <script>
-        // JavaScript 
+        // JavaScript functions
 
-         let total = 0;
+        let total = 0;
         let action = 0;
         let displayString = "";
 
@@ -97,7 +97,7 @@
         function clearFunction() {
             total = 0;
             displayString = "";
-            document.getElementById("display").innerHTML = "";
+            document.getElementById("display").innerHTML = displayString;
         }
         function add() {
             total = Number(displayString);
@@ -143,10 +143,9 @@
             else if (action == 4) {
                 total = total - Number(displayString);
             }
-        
+
             displayString = total;
             document.getElementById("display").innerHTML = displayString;
-        }
         }
     </script>
     <title>CALCULATOR</title>
@@ -165,7 +164,7 @@
             <!-- Rows of buttons -->
             <div class="row">
                 <!-- Calculator buttons -->
-                <button id="Ac" type="button" class="operation" onclick="clearFunction('clear')">AC</button>
+                <button id="Ac" type="button" class="operation" onclick="clearFunction()">AC</button>
                 <button id="Del" type="button" class="operation" onclick="Backspace()">DEL</button>
                 <button id="%" type="button" class="operation" onclick="percentage()">%</button>
                 <button id="/" type="button" class="operation" onclick="div()">÷</button>
