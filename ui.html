@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("https://st2.depositphotos.com/1021722/7053/i/450/depositphotos_70531635-stock-photo-art-spring-flowers-frame-background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            width: 200px;
+            height: 30px;
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+
+        .main-container {
+            /* Styling for the main container */
+            width: 25vw;
+            height: 60vh;
+            background-color: #2D9596;
+
+            border-color: cadetblue;
+
+            display: flex;
+            flex-direction: column;
+            margin-left: 350px;
+            margin-top: 100px;
+          
+        }
+
+
+        .top {
+            /* Styling for the top section */
+            width: 580px;
+            height: 150px;
+            font-size: 20px;
+            background-color: #944E63;
+            border-style: solid;
+            border-color: black;
+           
+
+        }
+
+        .bottom {
+            /* Styling for the bottom section */
+            width: 580px;
+            height: 500px;
+            background-color: #FFE7E7;
+            border-style: solid;
+            border-color: black;
+        }
+
+        .row {
+            /* Styling for rows of buttons */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            /* Styling for buttons */
+            width: 90px;
+            height: 50px;
+            margin: 10px;
+            font-size: 32px;
+            margin-left: 450px;
+        }
+
+        button:hover {
+            background-color: darksalmon;
+        }
+
+        .operation {
+            /* Styling for operator buttons */
+            background-color: #AE445A;
+        }
+
+        .display {
+            /* Styling for display */
+            font-size: 22px;
+        }
+
+        #display {
+            width: 35%;
+            height: 20%;
+        }
+    </style>
+    <script>
+        function add() {
+            let firstNo = document.getElementById("number-one").value;
+            let secondNo = document.getElementById("number-two").value;
+            let total = Number(firstNo) + Number(secondNo);
+            document.getElementById("display").innerHTML = "The Result is :  " + total;
+        }
+
+        function sub() {
+            let firstNo = document.getElementById("number-one").value;
+            let secondNo = document.getElementById("number-two").value;
+            let total = Number(firstNo) - Number(secondNo);
+            document.getElementById("display").innerHTML = "The Result is :  " + total;
+        }
+
+        function mul() {
+            let firstNo = document.getElementById("number-one").value;
+            let secondNo = document.getElementById("number-two").value;
+            let total = Number(firstNo) * Number(secondNo);
+            document.getElementById("display").innerHTML = "The Result is :  " + total;
+        }
+
+        function clearFunction() {
+            document.getElementById("display").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="main-container">
+        <div class="top">
+            <h1 type="text" id="display" value=""
+                style="font-size: 20px; text-align: right; margin-right: 10px; color: black;"></h1>
+
+            <!-- Display -->
+        </div>
+        <div class="bottom">
+
+            <input id="number-one" class="container" placeholder="0">
+            <input id="number-two" class="container" placeholder="0">
+
+            <div class="row">
+                <button id="Ac" type="button" class="operation" onclick="clearFunction()">AC</button>
+            </div>
+            <div class="row">
+                <button id="mul" type="button" class="operation" onclick="mul()">x</button>
+            </div>
+            <div class="row">
+                <button id="add" type="button" class="operation" onclick="add()">+</button>
+            </div>
+            <div class="row">
+                <button id="sub" type="button" class="operation" onclick="sub()">-</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
