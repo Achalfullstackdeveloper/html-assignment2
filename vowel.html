@@ -98,27 +98,24 @@
     </style>
     <script>
         // JavaScript function to check if the entered alphabet is a vowel
-        function checkVowel() {
-            var alphabet = document.getElementById('alphabet').value.toLowerCase();
-            var vowels = ['a', 'e', 'i', 'o', 'u'];
-            var resultDiv = document.getElementById('result');
 
-            if (alphabet.length === 1 && /^[a-zA-Z]+$/.test(alphabet)) {
-                if (vowels.includes(alphabet)) {
-                    resultDiv.textContent = alphabet.toUpperCase() + " is a vowel.";
-                } else {
-                    resultDiv.textContent = alphabet.toUpperCase() + " is not a vowel.";
-                }
+        function checkVowel() {
+            var char = document.getElementById("alphabet").value;
+            var ch = char.toLowerCase();
+            var resultDisplay = document.getElementById("result");
+
+            if (ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u') {
+                resultDisplay.textContent = "Given character is a Vowel";
             } else {
-                resultDiv.textContent = "Please enter a single alphabet character.";
+                resultDisplay.textContent = "Given character is a Consonant";
             }
         }
-        // JavaScript function to clearl
+ // JavaScript function to clearl
         function clearFunction() {
-            document.getElementById("result").textContent = "";
-            document.getElementById("alphabet").value = "";
+            document.getElementById("result").textContent = ""; // Clearing result
+            document.getElementById("alphabet").value = ""; // Clearing input field
         }
-
+       
     </script>
 </head>
 
