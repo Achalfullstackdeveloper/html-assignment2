@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Music Player</title>
+  <style>
+     body {
+            background-image: url("https://thumbs.dreamstime.com/b/enjoy-music-girl-headphones-against-park-sky-35664056.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    /* CSS styles */
+    .main-container {
+      text-align: center;
+      margin-top: 50px;
+      height:40vh ;/* Adjusted height for better visibility */
+      width: 30vw; /* Adjusted width for better visibility */
+     background-color:#B0C5A4;
+      border: 2px solid rgb(240, 238, 238); /* Used shorthand for border */
+      border-radius: 50%; /* Added border radius for a rounded appearance */
+      margin-left:150px;
+    }
+
+    #previous,
+    #playPause,
+    #next {
+      height: 30px;
+      width: 120px; /* Increased button width for better spacing */
+      margin-top: 20px; /* Adjusted button margin for better spacing */
+    }
+  </style>
+  <script>
+    // JavaScript
+    document.addEventListener('DOMContentLoaded', function () {
+      const audio = document.getElementById('audio');
+      const playPauseButton = document.getElementById('playPause');
+      const previousButton = document.getElementById('previous');
+      const nextButton = document.getElementById('next');
+
+      const songs = [
+        'song1.mp3',
+        'song2.mp3',
+        'song3.mp3',
+        'song4.mp3',
+        'song5.mp3'
+      ];
+      let currentSongIndex = 0;
+
+      function playPause() {
+        if (audio.paused) {
+          audio.play();
+          playPauseButton.textContent = 'Pause';
+        } else {
+          audio.pause();
+          playPauseButton.textContent = 'Play';
+        }
+      }
+
+      function playNext() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        audio.src = songs[currentSongIndex];
+        audio.play();
+        playPauseButton.textContent = 'Pause';
+      }
+
+      function playPrevious() {
+        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+        audio.src = songs[currentSongIndex];
+        audio.play();
+        playPauseButton.textContent = 'Pause';
+      }
+
+      playPauseButton.addEventListener('click', playPause);
+      nextButton.addEventListener('click', playNext);
+      previousButton.addEventListener('click', playPrevious);
+    });
+  </script>
+</head>
+
+<body>
+  <div class="main-container">
+    <div>
+      <audio id="audio" controls style="margin-left:20px ; margin-top: 40px; width: 300px;">
+        <source src="song1.mp3" type="audio/mpeg">
+        <source src="song2.mp3" type="audio/mpeg">
+        <source src="song3.mp3" type="audio/mpeg">
+        <source src="song4.mp3" type="audio/mpeg">
+        <source src="song5.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div>
+      <button id="playPause">Play</button><br>
+      <button id="previous">Previous</button><br>
+      <button id="next">Next</button>
+    </div>
+  </div>
+</body>
+
+</html>
