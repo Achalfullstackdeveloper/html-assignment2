@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekday Selector</title>
+    <style>
+        body {
+
+            background-image: url("https://cdn.pixabay.com/photo/2020/02/19/09/34/health-4861815_1280.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        input {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        /** Styling for the main-containern**/
+
+        .main-container {
+            width: 30vw;
+            height: 60vh;
+            border-color: rgb(224, 232, 232);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 150px;
+            margin-left: 900px;
+
+
+        }
+
+        /**Styling for the top section**/
+        .top {
+            width: 450px;
+            height: 350px;
+            font-size: 20px;
+        }
+
+        /** Styling for the bottom section**/
+        .bottom {
+            width: 450px;
+            height: 100px;
+
+
+        }
+
+        /**Styling for rows of buttons**/
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /**Styling for buttons section **/
+        button {
+            width: 300px;
+            height: 50px;
+            margin: 10px;
+            font-size: 32px;
+            margin-left: 80px;
+        }
+
+        /** Styling for button **/
+        button:hover {
+            background-color: #ce7a13;
+        }
+
+        /**Styling for operator buttons **/
+        .operation {
+            background-color: #FFE3CA;
+        }
+
+        /** Styling for display **/
+        .display {
+            font-size: 20px;
+        }
+
+        /** Styling for display ID **/
+        #display {
+            width: 100%;
+            height: 20%;
+            font-size: 50px;
+            margin-left: 55px;
+        }
+
+        /** Styling for input field**/
+        .input-field {
+            margin-left: 30px;
+            height: 35px;
+            width: 300px;
+        }
+    </style>
+    <script>
+        //javascript function for showDay
+        function showDay() {
+            var x = parseInt(document.getElementById('x').value);
+            var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            var selectedDay = days[x - 1];
+            if (selectedDay) {
+                document.getElementById('display').innerText = 'Day IS: ' + selectedDay;
+            } else {
+                document.getElementById('display').innerText = 'Please enter a number between 1 and 7.';
+            }
+        }
+        //javascript fuction for clear 
+        function clearFunction() {
+            document.getElementById('x').value = '';
+            document.getElementById('display').innerText = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- top -->
+        <div class="top"><br>
+            <input class="input-field" type="number" id="x" placeholder="ENTER A NUMBER "
+                style="margin-left:100px; width: 200px; font-size: 20px;" />
+            </br></br>
+            <!-- buttons-->
+            <div class="row">
+                <button id="Ac" type="button" class="operation" onclick="clearFunction()">CLEAR</button>
+            </div><br>
+            <div class="row">
+                <button id="submit" type="button" class="operation" onclick="showDay()">CHECK</button>
+            </div>
+        </div>
+        <!--bottom-->
+        <div class="bottom">
+            <h1 type="text" id="display" value=""> </h1>
+            <!-- Result display -->
+            <div id="result" style="font-size: 20px; margin-top: 20px;"></div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
