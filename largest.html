@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        /** Styling for the image**/
+        body {
+            background-image: url("https://cdn.cbeditz.com/cbeditz/preview/education-powerpoint-ppt-background-download-2-116244799280ivtwyusp2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /** Styling for  container section**/
+        .container {
+            width: 200px;
+            height: 30px;
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+
+        .main-container {
+            /** Styling for  main container**/
+            width: 30vw;
+            height: 60vh;
+
+
+            border-color: rgb(224, 232, 232);
+
+            display: flex;
+            flex-direction: column;
+            margin-left: 100px;
+            margin-top: 120px;
+
+        }
+
+
+        .top {
+            /**Styling for the top section**/
+            width: 580px;
+            height: 150px;
+            font-size: 20px;
+            background-color: #ADBC9F;
+            border-style: solid;
+            border-color: black;
+
+
+        }
+
+        .bottom {
+            /** Styling for the bottom section**/
+            width: 580px;
+            height:400px;
+            background-color:#12372A;
+            border-style: solid;
+            border-color: black;
+        }
+
+        .row {
+            /** Styling for rows of buttons**/
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            /**Styling for buttons section **/
+            width: 300px;
+            height: 50px;
+            margin: 10px;
+            font-size: 32px;
+            margin-left: 150px;
+        }
+
+        button:hover {
+            background-color: #90B77D;
+        }
+
+        .operation {
+            /** Styling for operator buttons**/
+            background-color: #1A5D1A;
+        }
+
+        .display {
+            /** Styling for display**/
+            font-size: 50px;
+        }
+
+        #display {
+            width: 80%;
+            height: 20%;
+        }
+
+        .input-field {
+            margin-left: 30px;
+            height: 35px;
+            width: 300px;
+        }
+    </style>
+    <script>
+        // Function to check the number//
+        // program to find the largest among three numbers
+        function check() {
+        // take input from the user
+        let num1 = parseFloat(document.getElementById('input1').value);    // First number
+        let num2 = parseFloat(document.getElementById('input2').value);    // Second number
+        let num3 = parseFloat(document.getElementById('input3').value);
+        let largest;
+        
+
+        // check the condition
+        if (num1 >= num2 && num1 >= num3) {
+            largest = num1;
+        }
+        else if (num2 >= num1 && num2 >= num3) {
+            largest = num2;
+        }
+        else {
+            largest = num3;
+        }
+
+        // display the result
+        console.log("The largest number is " + largest);
+        document.getElementById("display").innerHTML = "The largest number is: " + largest;
+    }
+    function clearFunction() {
+            // Function to clear the display
+            document.getElementById("display").innerHTML = "";
+
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Display main-container -->
+    <div class="main-container">
+        <!-- top -->
+        <div class="top">
+            <h1 type="text" id="display" value=""
+                style="font-size:25px;margin-left: 200px;margin-top: 80px; color: rgb(228, 225, 225);"> </h1>
+
+            <!-- bottom -->
+        </div>
+        <div class="bottom"><br>
+
+            <input class="input-field" id="input1" type="number" placeholder="0"
+                style="margin-left:105px; width: 400px;" /><br></br>
+            <input class="input-field" id="input2" type="number" placeholder="0"
+                style="margin-left:105px; width: 400px;" /><br></br>
+            <input class="input-field" id="input3" type="number" placeholder="0"
+                style="margin-left:105px; width: 400px;" />
+            <!-- buttons-->
+            <div class="row">
+                <button id="Ac" type="button" class="operation" onclick="clearFunction()">CLEAR</button>
+            </div>
+            <div class="row">
+                <button id="submit" type="button" class="operation" onclick="check()">CHECK</button>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
