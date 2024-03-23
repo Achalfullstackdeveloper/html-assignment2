@@ -10,14 +10,6 @@
             background-size: cover;
         }
 
-        /** Styling for  container section**/
-        .container {
-            width: 200px;
-            height: 30px;
-            margin-top: 5px;
-            margin-left: 30px;
-        }
-
         .main-container {
             /** Styling for  main container**/
             width: 20vw;
@@ -92,7 +84,7 @@
         }
     </style>
     <script>
-
+// javascript to calculate bill
         function calculateBill() {
 
             let units = Number(document.getElementById("units").value);
@@ -111,8 +103,8 @@
                 rate = 1.50;
             }
         }
-        function clearFunction() {
             // Function to clear the display
+         function clearFunction() {
             document.getElementById("display").innerHTML = "";
             document.getElementById("units").value = "";
 
@@ -128,16 +120,13 @@
             <h1 type="text" id="display" value="" style="font-size: 35px;"></h1> 
             <!-- Result display -->
             <div id="result" style="position: absolute; top: 10px; font-size: 20px;;"></div>
-            <!-- bottom -->
         </div>
+        <!-- bottom -->
         <div class="bottom"><br>
-
             <input class="input-field" type="number" id="units" placeholder=" ENTER  YOUR VALUES"
                 style="width: 380px;margin-left: 60px;">
             </br></br>
             <!-- buttons-->
-
-
             <div class="row">
                 <button id="submit" type="button" class="operation" onclick="calculateBill()">CHECK</button>
                 <button id="clear" type="button" class="operation" onclick="clearFunction()">CLEAR</button>
