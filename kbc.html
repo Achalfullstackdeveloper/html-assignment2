@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Style for body */
+        body {
+            background-image: url("https://images.indianexpress.com/2020/10/kbc-winners-amitabh-bachchan.jpg");
+            height: 100%;
+            width: 100vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Style for main container */
+        .main-container {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Style for start button */
+        .start-button {
+            height: 105px;
+            width: 470px;
+            background-color: #c7b53c;
+            font-size: 50px;
+            color: white;
+            margin-left: 500px;
+            margin-top: 800px;
+            border-style: solid;
+            border-color: aliceblue;
+        }
+
+        /* Style for display container */
+        .display {
+            width: 90%;
+            height: 200px;
+            background-color: #977557;
+            margin-left: 5%;
+            border-radius: 50px;
+            margin-top: 100px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for text display */
+        .text-display {
+            font-size: 50px;
+            color: white;
+        }
+
+        /* Style for answer buttons */
+        .button {
+            height: 70px;
+            width: 400px;
+            border-radius: 250px;
+            margin: 10px;
+            margin-left: 15%;
+            margin-top: 40px;
+            background-color: #7ebfd9;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        let questionNumber = 0;
+
+        // Function to display question one
+        function questionOne() {
+            document.getElementById("text-display").innerHTML = "1. Current Railway Minister of India is";
+            document.getElementById("answer-one").innerHTML = "Mamta Banarjee";
+            document.getElementById("answer-two").innerHTML = "Ashwini Vaishnaw";
+            document.getElementById("answer-three").innerHTML = "Bhagat Singh";
+            document.getElementById("answer-four").innerHTML = "Rajguru";
+        }
+
+        // Function to display question two
+        function questionTwo() {
+            document.getElementById("text-display").innerHTML = "2. Who is the prime minister of India";
+            document.getElementById("answer-one").innerHTML = "Narendra Modi";
+            document.getElementById("answer-two").innerHTML = "Anil";
+            document.getElementById("answer-three").innerHTML = "Shinde";
+            document.getElementById("answer-four").innerHTML = "Yogi";
+        }
+
+        // Function to display question three
+        function questionThree() {
+            document.getElementById("text-display").innerHTML = "3. Which god is also known as 'Gauri Nandan' ?";
+            document.getElementById("answer-one").innerHTML = "Agni";
+            document.getElementById("answer-two").innerHTML = "Indra";
+            document.getElementById("answer-three").innerHTML = "Hanuman";
+            document.getElementById("answer-four").innerHTML = "Ganesha";
+        }
+
+        // Function to display question four
+        function questionFour() {
+            document.getElementById("text-display").innerHTML = "4. Which city is known as Pink City in India ?";
+            document.getElementById("answer-one").innerHTML = "Mysore";
+            document.getElementById("answer-two").innerHTML = "Jaipur";
+            document.getElementById("answer-three").innerHTML = "Kochi";
+            document.getElementById("answer-four").innerHTML = "Bangalore";
+        }
+
+        // Function to display question five
+        function questionFive() {
+            document.getElementById("text-display").innerHTML = "5. Who wrote the famous play 'Hamlet' ?";
+            document.getElementById("answer-one").innerHTML = "William Shakespeare";
+            document.getElementById("answer-two").innerHTML = "George Orwell";
+            document.getElementById("answer-three").innerHTML = "Jane Austen";
+            document.getElementById("answer-four").innerHTML = "Leo Tolstoy";
+        }
+
+        // Function to display question six
+        function questionSix() {
+            document.getElementById("text-display").innerHTML = "6. Which planet is known as the Red Planet ?";
+            document.getElementById("answer-one").innerHTML = "Venus";
+            document.getElementById("answer-two").innerHTML = "Mars";
+            document.getElementById("answer-three").innerHTML = "Saturn";
+            document.getElementById("answer-four").innerHTML = "Jupiter";
+        }
+
+        // Function to display question seven
+        function questionSeven() {
+            document.getElementById("text-display").innerHTML = "7. What is the capital city of Australia ?";
+            document.getElementById("answer-one").innerHTML = "Sydney";
+            document.getElementById("answer-two").innerHTML = "Melbourne";
+            document.getElementById("answer-three").innerHTML = "Canberra";
+            document.getElementById("answer-four").innerHTML = "Perth";
+        }
+
+        // Function to display question eight
+        function questionEight() {
+            document.getElementById("text-display").innerHTML = "8. Who painted the Mona Lisa ?";
+            document.getElementById("answer-one").innerHTML = "Pablo Picasso";
+            document.getElementById("answer-two").innerHTML = "Leonardo da Vinci";
+            document.getElementById("answer-three").innerHTML = "Vincent van Gogh";
+            document.getElementById("answer-four").innerHTML = "Michelangelo";
+        }
+
+        // Function to display question nine
+        function questionNine() {
+            document.getElementById("text-display").innerHTML = "9. What is the chemical symbol for gold ?";
+            document.getElementById("answer-one").innerHTML = "Au";
+            document.getElementById("answer-two").innerHTML = "Ag";
+            document.getElementById("answer-three").innerHTML = "Pt";
+            document.getElementById("answer-four").innerHTML = "Pb";
+        }
+
+        // Function to display question ten
+        function questionTen() {
+            document.getElementById("text-display").innerHTML = "10. Who is known as the 'Father of Modern Physics' ?";
+            document.getElementById("answer-one").innerHTML = "Isaac Newton";
+            document.getElementById("answer-two").innerHTML = "Albert Einstein";
+            document.getElementById("answer-three").innerHTML = "Galileo Galilei";
+            document.getElementById("answer-four").innerHTML = "Niels Bohr";
+        }
+
+        // Function to handle questions
+        function question(question) {
+            if (question == 1) {
+                questionNumber = 1;
+                questionOne();
+            } else if (question == 2) {
+                questionNumber = 2;
+                questionTwo();
+            } else if (question == 3) {
+                questionNumber = 3;
+                questionThree();
+            } else if (question == 4) {
+                questionNumber = 4;
+                questionFour();
+            } else if (question == 5) {
+                questionNumber = 5;
+                questionFive();
+            } else if (question == 6) {
+                questionNumber = 6;
+                questionSix();
+            } else if (question == 7) {
+                questionNumber = 7;
+                questionSeven();
+            } else if (question == 8) {
+                questionNumber = 8;
+                questionEight();
+            } else if (question == 9) {
+                questionNumber = 9;
+                questionNine();
+            } else if (question == 10) {
+                questionNumber = 10;
+                questionTen();
+            } else {
+                document.getElementById("text-display").innerHTML =
+                    "MUBARAKHO AAP JIT CHUKE HAI PURE 7 CRORE RUPEES...";
+            }
+        }
+
+        // Function to handle answers
+        function answer(givenAnswer) {
+            if (questionNumber == 1) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 2);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 2) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 3);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 3) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 4);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 4) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 5);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 5) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 6);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 6) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 7);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 7) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 8);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 8) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 9);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 9) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 10);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 10) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 0);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+        }
+
+        // Function to handle correct and incorrect answers
+        function answerOne(correctAnswer, nextQuestion) {
+            if (correctAnswer) {
+                document.getElementById("text-display").innerHTML =
+                    "Bilkul sahi jawab!";
+                document.getElementById("container").style.backgroundColor =
+                    "#004225";
+                setTimeout(() => {
+                    question(nextQuestion);
+                }, 3000);
+            } else {
+                document.getElementById("text-display").innerHTML =
+                    "गलत जवाब.";
+                document.getElementById("container").style.backgroundColor =
+                    "#FF0000";
+                setTimeout(() => {
+                    startScreen();
+                }, 2000);
+            }
+        }
+
+        // Function to start the quiz
+        function dostart() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            question(1);
+        }
+
+        // Function to reset and show start button
+        function startScreen() {
+            document.getElementById("main-body").hidden = true;
+            document.getElementById("play-button").hidden = false;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Start button to begin the quiz -->
+    <button class="start-button" id="play-button" onclick="dostart()">LET'S START</button>
+    <!-- Main container for the quiz content -->
+    <div class="main-container" id="main-body" hidden="true">
+        <!-- Container to display the question -->
+        <div class="display" id="container">
+            <h1 id="text-display" class="text-display"></h1>
+        </div>
+        <!-- Answer buttons for the user to select -->
+        <button class="button" id="answer-one" onclick="answer(1)"></button>
+        <button class="button" id="answer-two" onclick="answer(2)"></button>
+        <button class="button" id="answer-three" onclick="answer(3)"></button>
+        <button class="button" id="answer-four" onclick="answer(4)"></button>
+    </div>
+</body>
+
+</html>
