@@ -2,6 +2,7 @@
 <html>
   <head>
     <style>
+        /**Styling for main**/
       .main-container {
         width: 100vw;
         height: 100vh;
@@ -9,6 +10,7 @@
         display: flex;
         flex-direction: row;
       }
+        /**Styling for left**/
       .left-container {
         width: 50%;
         height: 100%;
@@ -21,7 +23,7 @@
         justify-content: center;
         gap: 50px;
         font-size: 20px;
-      }
+      }  /**Styling for rights**/
       .right-container_cl {
         width: 50%;
         height: 100%;
@@ -35,6 +37,7 @@
         flex-wrap: wrap;
         font-size: 30px;
       }
+        /**Styling for plus button**/
       .plus-button {
         background-color: rgb(9, 137, 9);
         width: 40%;
@@ -42,18 +45,21 @@
         font-size: 22px;
     margin-top:50px;
       }
+        /**Styling for hover in plus button**/
       .plus-button-hover {
         background-color: #ffffff;
         width: 40%;
         height: 120px;
         font-size: 32px;
       }
+       /**Styling for minus button**/
       .minus-button {
         background-color: rgb(193, 6, 6);
         width: 40%;
         height: 100px;
         font-size: 22px;
       }
+       /**Styling for brick**/
       .brick {
         background-color: red;
         border-color: black;
@@ -65,11 +71,13 @@
       }
     </style>
   </head>
-
   <body style="margin: 0" onload="callThisFunction()">
+    <!-- Display main-container -->
     <div class="main-container">
+      <!-- Display left-container -->
       <div class="left-container">
         <h1 style="color: white" id="count">1</h1>
+        <!-- Display button -->
         <button
           id="button-one"
           class="plus-button"
@@ -84,6 +92,7 @@
         <div class="brick"></div>
       </div>
     </div>
+    <!--link for javascript-->
     <script src="brick.js"></script>
   </body>
 </html>
