@@ -102,7 +102,7 @@
     <script>
         //javascript function for showDay
         function showDay() {
-            var x = parseInt(document.getElementById('x').value);
+            var x = document.getElementById('x').value;
             var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
             var selectedDay = days[x - 1];
             if (selectedDay) {
