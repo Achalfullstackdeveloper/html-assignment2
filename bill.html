@@ -86,28 +86,27 @@
     <script>
 // javascript to calculate bill
         function calculateBill() {
-
-            let units = Number(document.getElementById("units").value);
+            let units = document.getElementById("units").value;
             let rate = 0;
-            let additionalcharge;
+            let billAmount = 0;
+
             if (units <= 50) {
                 rate = 0.5;
-                let billAmount = units * rate;
-                document.getElementById("display").innerHTML = 'Your total bill amount is: ₹' + billAmount;
-                console.log(billAmount);
             } else if (units <= 150) {
                 rate = 0.75;
             } else if (units <= 250) {
                 rate = 1.25;
-            } else if (units <= 251) {
+            } else {
                 rate = 1.50;
             }
-        }
-            // Function to clear the display
-         function clearFunction() {
-            document.getElementById("display").innerHTML = "";
-            document.getElementById("units").value = "";
 
+            billAmount = units * rate;
+            document.getElementById("display").textContent = 'Your total bill amount is: ₹' + billAmount;
+        }
+
+        function clearFunction() {
+            // Function to clear the display
+            document.getElementById("display").textContent = "";
         }
     </script>
 </head>
