@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tables</title>
+    <style>
+       body {
+            background-image: url("https://pub-static.fotor.com/assets/bg/502d2e2f-f6cd-4508-9707-03c7663ecc1e.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        /* Style main container */
+        .main-container {
+            background-color: rgba(31, 148, 198, 0.194);
+            width: 50vw;
+            margin-left: 23vw;
+            height: 45vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 20px;
+            box-shadow: 0px 0px 90px white;
+            margin-top: 180px;
+        }
+
+        /* Style input */
+        .input-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Style display */
+        .display {
+            background-color: whitesmoke;
+            width: 90%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin-top: 45px;
+            padding: 20px;
+            margin-left: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* Style input box */
+        .input-box {
+            height: 64px;
+            width: 80%;
+            font-size: 22px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.701);
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* Style button */
+        .button {
+            width: 80%;
+            margin: 20px;
+            height: 64px;
+            background-color: navy;
+            font-size: 22px;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 26px;
+        }
+    </style>
+    <script>
+        // JavaScript display text
+        function promptt() {
+            let x = prompt("Enter value = ");
+            if (x !== null) {
+                document.getElementById("display").innerText = "Prompt = " + x;
+            }
+        }
+
+        function htmll() {
+            let x = document.getElementById("input").value;
+            document.getElementById("display").innerText = "HTML = " + x;
+        }
+
+        function assignn() {
+            let x = "achal";
+            document.getElementById("display").innerText = "Assign = " + x;
+        }
+
+        function clearText() {
+            document.getElementById("display").innerText = "";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Name -->
+   
+    <!-- Mains -->
+    <div class="main-container">
+        <div class="display" id="display"></div><BR>
+        <div class="input-container">
+            <input id="input" type="number" class="input-box" /><BR>
+            <!-- 2 buttons -->
+            <button class="button" onclick="promptt()">Prompt</button>
+            <button class="button" onclick="htmll()">HTML</button>
+            <button class="button" onclick="assignn()">Assign</button>
+            <button class="button" style="background-color: rgba(0, 0, 255, 0.505);" onmouseenter="clearText()">Clear All</button>
+        </div>
+    </div>
+</body>
+
+</html>
