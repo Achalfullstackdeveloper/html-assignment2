@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENJOY</title>
     <link rel="icon" type="image/x-icon" href="enjoy.png">
     <style>
@@ -9,69 +11,122 @@
             background-image: url("https://img.freepik.com/free-vector/gradient-minimalist-background_23-2150012317.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 0;
+            padding: 0;
         }
-
         /* styling for main section */
         .main {
             border-style: solid;
             color: #171616;
-            height: 70vh;
-            width: 60vw;
-            margin-left: 300px;
-            margin-top: 50px;
+            height: auto;
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
             box-shadow: 0px 0px 31px white;
-
+            padding: 20px;
+            position: relative;
         }
-
         /* styling for container*/
         .container {
-            width: 800px;
+            width: 100%;
+            max-width: 800px;
             height: 40px;
-            margin-left: 100px;
-            margin-top: 40px;
+            margin: 40px auto 0;
+            display: block;
         }
-
         /* styling for placeholder */
         .container::placeholder {
             color: gray;
             font-style: italic;
             font-size: 20px;
             text-align: center;
-            margin-left: 50px;
         }
-
         h1 {
-            text-align: center;
+            text-align: left;
+            color:#171616;
+            font-size: 60px;
+            margin-top: 70px;
+            margin-left: 0;
         }
-
         .image-container {
-            display: inline-block;
-            vertical-align: middle;
+            position: absolute;
+            top: 30px;
+            right: 20px;
         }
-
         .image-container img {
             height: 200px;
             width: 200px;
         }
-
         /* styling for button */
         .operation {
-            margin-top: 20px;
-            margin-left: 350px;
+            margin: 20px auto;
             height: 50px;
             width: 300px;
-        }
-
-        .main .operation {
+            display: block;
             font-size: 20px;
             background-color: antiquewhite;
         }
-
         /* styling for result*/
         #results {
             margin-top: 30px;
-            margin-left: 250px;
+            text-align: center;
             font-size: 50px;
+        }
+
+        /* Media query for tablets */
+        @media screen and (max-width: 768px) {
+            .main {
+                width: 95%;
+                margin: 30px auto;
+            }
+            h1 {
+                font-size: 40px;
+                margin-top: 50px;
+            }
+            .image-container img {
+                height: 150px;
+                width: 150px;
+            }
+            .operation {
+                width: 80%;
+                max-width: 300px;
+            }
+            #results {
+                font-size: 40px;
+            }
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 480px) {
+            .main {
+                margin: 20px auto;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 30px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            .image-container {
+                position: static;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .image-container img {
+                height: 100px;
+                width: 100px;
+            }
+            .container {
+                height: 30px;
+                font-size: 16px;
+            }
+            .operation {
+                height: 40px;
+                font-size: 16px;
+            }
+            #results {
+                font-size: 30px;
+            }
         }
     </style>
     <script>
@@ -105,18 +160,14 @@
         }
     </script>
 </head>
-
 <body>
     <!--main section-->
     <div class="main">
-        <h1 style="text-align: left; color:#171616;font-size: 60px; margin-top:70px;margin-left: 300px ;">ENJOY
-            <br>PROGRAMMING
-        </h1>
+        <h1>ENJOY<br>PROGRAMMING</h1>
         <!--image section-->
-        <img src="enjoyicon.png" width="200px" height="200px" style="
-                    position: absolute;
-                    top: 1px;
-                    right:680px;margin-top: 30px; color:black">
+        <div class="image-container">
+            <img src="enjoyicon.png" alt="Enjoy icon">
+        </div>
         <!--top section-->
         <div class="top">
             <input id="number-one" class="container" placeholder="TYPE HERE .......">
@@ -126,5 +177,4 @@
         <div id="results"></div>
     </div>
 </body>
-
 </html>
