@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         /** Styling for the image**/
@@ -9,8 +9,9 @@
             background-image: url("https://t3.ftcdn.net/jpg/03/89/61/88/360_F_389618887_PImTbyGB4vTQOoGKxjhOKp2w7hZmcNAs.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 0;
+            padding: 0;
         }
-
         /** Styling for  container section**/
         .container {
             width: 200px;
@@ -18,82 +19,108 @@
             margin-top: 5px;
             margin-left: 30px;
         }
-
         .main-container {
             /** Styling for  main container**/
-            width: 30vw;
-            height: 50vh;
-
-
+            width: 90%;
+            max-width: 580px;
+            height: auto;
             border-color: rgb(224, 232, 232);
-
             display: flex;
             flex-direction: column;
-            margin-left: 200px;
-            margin-top: 200px;
-
+            margin: 100px auto;
         }
-
-
         .top {
             /**Styling for the top section**/
-            width: 580px;
+            width: 100%;
             height: 150px;
             font-size: 20px;
             background-color: #adaab5;
             border-style: solid;
             border-color: black;
-
-
         }
-
         .bottom {
             /** Styling for the bottom section**/
-            width: 580px;
-            height: 300px;
+            width: 100%;
+            height: auto;
             background-color: #EEEEEE;
             border-style: solid;
             border-color: black;
+            padding: 20px 0;
         }
-
         .row {
             /* Styling for rows of buttons */
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
-
         button {
             /**Styling for buttons section **/
-            width: 300px;
+            width: 80%;
+            max-width: 300px;
             height: 50px;
-            margin: 10px;
-            font-size: 32px;
-            margin-left: 150px;
+            margin: 10px auto;
+            font-size: 24px;
         }
-
         button:hover {
             background-color: rgb(155, 195, 200);
         }
-
         .operation {
             /* Styling for operator buttons */
             background-color: #449aae;
         }
-
         .display {
             /* Styling for display */
-            font-size: 50px;
+            font-size: 24px;
         }
-
         #display {
             width: 100%;
             height: 20%;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .input-field {
+            width: 80%;
+            max-width: 400px;
+            height: 35px;
+            margin: 0 auto;
+            display: block;
         }
 
-        .input-field {
-            margin-left: 30px;
-            height: 35px;
-            width: 300px;
+        /* Media query for tablets */
+        @media screen and (max-width: 768px) {
+            .main-container {
+                width: 95%;
+                margin: 50px auto;
+            }
+            .top, .bottom {
+                width: 100%;
+            }
+            button {
+                font-size: 20px;
+            }
+            #display {
+                font-size: 24px;
+            }
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 480px) {
+            .main-container {
+                margin: 20px auto;
+            }
+            .top {
+                height: 120px;
+            }
+            button {
+                height: 40px;
+                font-size: 18px;
+            }
+            #display {
+                font-size: 20px;
+                margin-top: 30px;
+            }
+            .input-field {
+                height: 30px;
+            }
         }
     </style>
     <script>
@@ -109,41 +136,28 @@
         }
         function clearFunction() {
             // Function to clear the display
-
             document.getElementById("display").innerHTML = "";
         }
-
     </script>
 </head>
-
 <body>
     <!-- Display main-container -->
     <div class="main-container">
         <!-- top -->
         <div class="top">
-            <h1 type="text" id="display" value=""
-                style="font-size:27px;margin-left: 100px;margin-top: 80px; color: rgb(1, 0, 0);"> </h1>
-
-            <!-- bottom -->
+            <h1 type="text" id="display" value="" class="display"></h1>
         </div>
-        <div class="bottom"><br>
-
-            <input class="input-field" id="input-field" type="number" placeholder="enter your age"
-                style="margin-left:110px; width: 400px;" />
-            </br></br>
+        <!-- bottom -->
+        <div class="bottom">
+            <input class="input-field" id="input-field" type="number" placeholder="enter your age" />
             <!-- buttons-->
             <div class="row">
                 <button id="Ac" type="button" class="operation" onclick="clearFunction()">CLEAR</button>
-            </div><br>
+            </div>
             <div class="row">
                 <button id="submit" type="button" class="operation" onclick="eligibility()">SUBMIT</button>
-
             </div>
         </div>
     </div>
-
-    </div>
-
 </body>
-
 </html>
