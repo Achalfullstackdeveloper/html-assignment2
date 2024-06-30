@@ -2,35 +2,36 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* CSS styles */
         body {
             background-image: url("https://image.slidesdocs.com/responsive-images/background/simple-white-education-pencil-calculator-art-powerpoint-background_644fe4b2ed__960_540.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-
+ /* Styling for the main container */
         .main-container {
-            /* Styling for the main container */
             width: 25vw;
-            height: 60vh;
+            min-width: 300px;
+            max-width: 500px;
             background-color: #2D9596;
-            border-radius: 2px;
-            border-color: cadetblue;
-            border-style: double;
+            border-radius: 15px;
+            border: 3px double cadetblue;
             display: flex;
             flex-direction: column;
-            margin-left: 750px;
-            margin-right: auto;
-            margin-top: 90px;
-            border-radius: 15px;
             padding: 13px;
+            box-sizing: border-box;
         }
-
+ /* Styling for the top section */
         .top {
-            /* Styling for the top section */
-            width: 580;
-            height: 150px;
+            width: 100%;
             padding: 5px;
             font-size: 20px;
             margin-bottom: 13px;
@@ -39,29 +40,27 @@
         }
 
         .bottom {
-            /* Styling for the bottom section */
-            width: 580;
-            height: 400px;
+            width: 100%;
             background-color: #E0F4FF;
             gap: 10px;
             margin-bottom: 10px;
             border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
         }
-
+/* Styling for rows of buttons */
         .row {
-            /* Styling for rows of buttons */
             display: flex;
             justify-content: space-between;
         }
 
         button {
-            /* Styling for buttons */
-            width: 90px;
+            width: 22%;
             height: 50px;
-            margin: 10px;
+            margin: 5px;
             background: #43766C;
             color: black;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 600;
             border: 1px solid grey;
             outline-offset: 3px;
@@ -69,18 +68,49 @@
         }
 
         button:hover {
-            /* Styling for buttn */
             background-color: #ddd;
         }
 
         .operation {
-            /* Styling for operator buttons */
             background-color: #2D9596;
         }
 
         .display {
-            /* Styling for display */
             font-size: 22px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 1200px) {
+            .main-container {
+                width: 40vw;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .main-container {
+                width: 60vw;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .main-container {
+                width: 90vw;
+            }
+
+            button {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            button {
+                font-size: 18px;
+                height: 45px;
+            }
+
+            .top h1 {
+                font-size: 32px !important;
+            }
         }
     </style>
     <script>
@@ -161,7 +191,6 @@
         </div>
         <!-- Bottom section -->
         <div class="bottom">
-            <!-- Rows of buttons -->
             <div class="row">
                 <!-- Calculator buttons -->
                 <button id="Ac" type="button" class="operation" onclick="clearFunction()">AC</button>
@@ -196,6 +225,7 @@
         </div>
     </div>
 
+    </div>
 </body>
 
 </html>
