@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- Title of the page -->
     <title>INDIAN FLAG</title>
-    
-    <!-- Internal CSS styles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            /* Background image for the body */
-            background-image: url("https://e1.pxfuel.com/desktop-wallpaper/636/496/desktop-wallpaper-new-walpaper-indian-flag-indepence-day-tricolor-indian-national-flag-background-nature.jpg");
+            background-image: url("https://t4.ftcdn.net/jpg/04/07/74/11/360_F_407741127_eZXxBH1BUCLHjxHNkfprktSQE5E8FLrj.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-            margin-top: 250px;
-            margin-left: 50px;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-
-        /* Container for the three colored boxes */
         .boxx {
             border-style: solid;
             border-radius: 5px;
         }
-
-        /* Styling for the outer box */
         .tri {
-            height: 45vh;
-            width: 40vw;
+            width: 80vw;
+            max-width: 600px;
         }
-
-        /* Styling for each colored box */
         .box {
-            width: 40vw;
-            height: 15vh;
+            width: 100%;
+            height: 100px;
         }
-
-        /* Styling for the first box (saffron color) */
         .box-one {
             background-color: rgb(240, 96, 12);
         }
-
-        /* Styling for the second box (white color) */
         .box-two {
             background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-        /* Styling for the third box (green color) */
         .box-three {
             background-color: #046A38;
         }
+        .box-two img {
+            height: 80%;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .tri {
+                width: 90vw;
+            }
+            .box {
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .tri {
+                width: 95vw;
+            }
+            .box {
+                height: 60px;
+            }
+        }
     </style>
 </head>
-
 <body>
-    <!-- Container for the outer box  -->
     <div class="tri boxx">
-        <!-- First colored box (saffron) -->
         <div class="box box-one"></div>
-        
-        <!-- Second colored box (white) with the Ashoka Chakra image -->
         <div class="box box-two">
-            <img src="https://media.istockphoto.com/id/1214007702/vector/the-ashoka-chakra-vector-icon-in-a-navy-blue-color-on-a-white-background-indian-national.jpg?s=612x612&w=0&k=20&c=lX4urbWR03cjZcZfgGlhS6OMkB01URFO4UsqtcyJ8D8="
-                height="117px" width="height" text-align="center" style="margin-left: 40%;">
+            <img src="https://media.istockphoto.com/id/1214007702/vector/the-ashoka-chakra-vector-icon-in-a-navy-blue-color-on-a-white-background-indian-national.jpg?s=612x612&w=0&k=20&c=lX4urbWR03cjZcZfgGlhS6OMkB01URFO4UsqtcyJ8D8=" alt="Ashoka Chakra">
         </div>
-        
-        <!-- Third colored box (green) -->
         <div class="box box-three"></div>
     </div>
 </body>
-
 </html>
