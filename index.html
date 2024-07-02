@@ -1,84 +1,279 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>index</title>
-    <style>
-        /* Styling for the main section */
-        .main {
-            height: 30vh;
-            width: 100vw;
-            margin-bottom: 0; /* Remove margin at the bottom */
-        }
-
-        /* Styling for the container */
-        #container {
-            width: 450px;
-            height: 100px;
-            border: 3px solid rgb(228, 223, 223);
-            background-color: rgb(29, 96, 69);
-            margin-top: 2px;
-            border-radius: 30px;
-            margin-left: 300px;
-        }
-
-        #background-video {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+   
+    <link rel="stylesheet" href="media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="icon" type="image/png" href="./Img/Dg Gallego.png">
+<link rel="stylesheet" href="./style.css">
+   
+    <link rel="stylesheet" href="./responsivenav1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
 </head>
 
 <body>
-    <!--main section-->
-    <div class="main">
-        <h1 style="text-align: left; color:#faf8f8;font-size: 90px; margin-top:120px;margin-left: 45px ;"> HELLO ! I
-            AM<br>
-            ACHAL PATIL <BR>FULL STACK DEVELOPER !
-        </h1><br>
-        <!--image division-->
-        <img src=".\images\photocrop (1).jpg" width="400" height="400" style="border-style: solid;
-                    border-radius: 50%;
-                    border-color: cornsilk;
-                    position: absolute;
-                    top: 20px;
-                    right: 50px;margin-top: 30px;
-                    box-shadow: 0px 0px 31px white;">
 
-        <!-- Hyperlinks section -->
-        <div class="hyperlinktext"
-            style="margin-left: 1700px; margin-top: 10px;font-size: 40px;color: rgb(18, 18, 19);">
-                CONTACT ME <br>
-               <a
-                href="https://www.linkedin.com/in/achal-patil-532461257">
-                <img src="./images/linkedin.jpg" width="70px" height="70px" border-radius:50%; style="margin-top: 5px;"></a>
-                <a
-                href="https://github.com/Achalfullstackdeveloper/html-assignment2.git">
-                <img src="./images/git.jpg" width="70px"  height="70px"style="margin-top: 5px;"> </a> 
-                <a href="https://join.skype.com/invite/yzIkSUS2g4Hw">
-                <img src="./images/skype.jpg" width="70px"  height="70px"style="margin-top: 5px;"> </a> 
+    <nav>
+        
+        <input type="checkbox" id="check" name="ggvv" value="">
+        <label for="check" id="checkbtn"> <i class="fa fa-bars"></i></label>
+        <ul>
+            <li><a  href="#home">home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+
+    <!-- <header class="header"> -->
+         <!-- navbar Section -->
+        <!-- <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">HOME</a>
+            <a href="#portfolio" style="--i:4">PROJECT</a>
+            <a href="#skills" style="--i:3">SKILL</a>
+            <a href="#education" style="--i:5">EDUCATION</a>
+            <a href="#contact" style="--i:5">CONTACT</a>
+        </nav> -->
+    <!-- </header> -->
+ <!-- home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3> <span style="color: #ffee10;">Hello,</span>It's Me</h3>
+            <h1>Achal <span style="color: #ffee10;"> patil</span></h1>
+            <p> <br> I'm a dedicated software developer with a passion for creating innovative digital solutions. With a
+                strong foundation in programming and a knack for problem-solving, I specialize in crafting robust
+                software applications that drive efficiency and user satisfaction.
             </p>
+           <!-- icon-->
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/achal-patil-532461257" style="--i:9" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" style="--i:10" target="_blank"><i class='bx bxl-gmail'></i></a>
+                <a href="https://github.com/dashboard" style="--i:10" target="_blank"><i class='bx bxl-github'></i></a>
+                
+            </div>
+            <a href="resume1.html" class="btn-box">More About Me</a>
         </div>
-        <!-- container section -->
-        <div id="container" style="border-radius: 30px; ">
-            <a href="assignment.html" style="text-decoration: none; box-shadow: 0px 0px 131px whitesmoke;">
-                <!-- Text for work -->
-                <h3 style="font-size: 45px; color:rgb(251, 250, 250);text-decoration: none;text-align: center; margin-left:70px;margin-top:20px;"> MY WORK</h3>
-            </a>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="dark_bg section-padding">
+        <div class="container">
+            <h2 class="section-title">PRO<span>JECTS</span></h2>
+              <!-- buttons -->
+            <div class="controls">
+                <button class="filter active" data-filter="all"><a href="assignall.html">All</a></button>
+                <button class="filter" data-filter=".design"><i class='bx bxl-html5' > <a href="assign1.html">html & </i><i class='bx bxl-css3' ></i> css</a></button>
+                <button class="filter" data-filter=".development"><i class='bx bxl-javascript' ><a href="javascr.html"> </i>javascript</a></button>
+            </div>
+        </div>
+            <!--project11-->
+                <div class="project">
+                    <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <img src="assets/img/service/icon-responsive.svg" alt="" />
+                        </div>
+                        <h2>HTML CSS</h2>
+                        <p>HTML is a markup language used to create static web pages and web applications..</p>
+                        <a href="assign1.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                  <!--project2 -->
+                <div class="project">
+                    <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <img src="assets/img/service/icon-responsive.svg" alt="" />
+                        </div>
+                        <h2>JAVASCRIPT</h2>
+                        <p>JavaScript is a dynamic programming language that's used for web development, in web
+                            applications, for game development.</p>
+                        <a href="javascr.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+      <!--  About section -->
+    <h2 class="section-title">ABOUT  <span>ME</span> <box-icon name='child'></box-icon><i class='bx bx-child'></i></h2>
+    <div class="about-section" id="about">
+          <!--  about image -->
+        <div class="about-image">
+            <img src="C:\Users\patil\OneDrive\ドキュメント\Achalnewsd\achalp\photo.jpg" alt="">
+        </div>
+          <!-- about content -->
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>I am an engineering student specializing in Artificial Intelligence, with a strong foundation in programming and a passion for creating innovative digital solutions. I am eager to learn and explore various areas of AI.I am curious to become a full stack developer, eager to learn and master both front-end and back-end technologies.</p>
+           <p> MY SKILLS <br><a href="#skills" class="read-more-btn">Read More</a></br><br></p>
+           <P>EDUCATION <br><a href="#education" class="read-more-btn">Read More</a> </p>
+           
         </div>
     </div>
-    <!-- video section -->
-    <video id="background-video" autoplay loop muted poster="././video2.mp4">
-        <source src="././video2.mp4" type="video/mp4">
-    </video>
-
+  <!--  skills -->
+    <h2 class="section-title">SK<span>ILLS</span></h2>
+    <section>
+        <div class="container" id="skills">
+              <!--techical skills -->
+            <h1 class="heading">Technical Skills</h1>
+            <div class="Technical-bars">
+                  <!--  bars -->
+                <div class="bar">
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                  <!--  bars -->
+                <div class="bar">
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                  <!--  bars -->
+                <div class="bar">
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                  <!--  bars -->
+                <div class="bar">
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progress-line python">
+                        <span></span>
+                    </div>
+                </div>
+                 <!--  bars -->
+                <div class="bar">
+                    <div class="info">
+                        <span>React</span>
+                    </div>
+                    <div class="progress-line react">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+ <!--professional skills -->
+        <div class="container">
+            <h1 class="heading">Professional Skills</h1>
+             <!-- radial bars -->
+            <div class="radial-bars">
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">Creativity</div>
+                </div>
+                 <!-- radial bars -->
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">65%</div>
+                    <div class="text">Communication</div>
+                </div>
+                 <!-- radial bars -->
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">75%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+                 <!-- radial bars -->
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">Team Work</div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Education Section  -->
+    <section>
+        <div class="services1" id="education">
+             <!-- container class -->
+            <div class="container">
+                <h2 class="section-title">EDU<span>CATION</span></h2>
+                <div class="services1-list">
+                    <div>
+                         <!-- container:box -->
+                        <i class='bx bxs-graduation bx-tada' style='color:#ffee10'></i>
+                        <h2>B-Tech</h2>
+                        <p>Pursuing my Bachelor's in Artificial Intelligence and Data Science Engineering from SB JAIN
+                            INSTITUTE OF TECHNOLOGY  Nagpur</p>
+                        <i class='bx bx-exit' style='color:#ffee10'></i>
+                    </div>
+                    <div>
+                         <!-- container:box -->
+                        <i class='bx bxs-graduation bx-tada' style='color:#ffee10'></i>
+                        <h2>CBSE 12<sup>th</sup></h2>
+                        <p>I completed my 12th from Orchid Public School Katol CBSE in Science field
+                        </p>
+                        <i class='bx bx-exit' style='color:#ffee10'></i>
+                    </div>
+                    <div>
+                         <!-- container:box -->
+                        <i class='bx bxs-graduation bx-tada' style='color:#ffee10'></i>
+                        <h2>CBSE 10<sup>th</sup></h2>
+                        <p>Secured good marks in the CBSE board examinations from Mount Carmel Convent School Katol
+                            With a solid academic.</p>
+                        <i class='bx bx-exit' style='color:#ffee10'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- contact Section -->
+    <section class="contact" id="contact">
+        <h2>CONT<span>ACT</span></h2>
+        <div class="contact-text">
+             <!-- contact Section : contact list -->
+            <div class="contact-list">
+                <li><i class='bx bx-mail-send'></i> xyz@gmail.com</a></li>
+                <li><i class='bx bxs-phone-call'></i> +919167589330</a></li>
+                <li><i class='bx bxs-map'></i> <span>1234 Street Name, City, Country</span></li>
+            </div>
+             <!-- contact Section : contact icons -->
+            <div class="contact-icons">
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><i class='bx bxl-gmail' style='color:#ffee10'></i></a>
+                <a href="https://join.skype.com/invite/yzIkSUS2g4Hw" target="_blank"><i class='bx bxl-skype' style='color:#ffee10'></i></a>
+                <a href="https://www.linkedin.com/in/achal-patil-532461257" target="_blank"><i class='bx bxl-linkedin-square' style='color:#ffee10'></i></a>
+                <a href="https://github.com/dashboard" target="_blank"><i class='bx bxl-github' style='color:#ffee10'></i></a>
+            </div>
+        </div>
+    </section>
+     <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+<!-- JavaScript File -->
+    <script src="main.js"></script>
 </body>
 
 </html>
