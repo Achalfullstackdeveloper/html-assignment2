@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Clothing Store</title>
     <style>
         /* Styling for the body */
@@ -10,13 +9,18 @@
             background-image: url("https://img.freepik.com/free-photo/peanuts-table-with-word-peanut-bottom_188544-23229.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
         /* Styling for the form container */
         .mean {
             text-align: left;
-            margin: 70px;
+            margin: 70px auto;
             width: 800px;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         /* Styling for text within the form */
@@ -26,7 +30,7 @@
             text-align: left;
         }
 
-        /* Style for  phone number */
+        /* Style for phone number */
         .phone-link {
             position: fixed;
             bottom: 10px;
@@ -38,71 +42,178 @@
             border-radius: 5px;
             text-decoration: none;
         }
+
+        /* Styling for the fieldset */
+        fieldset {
+            background-color: #E9DAC1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Styling for input fields */
+        input[type="text"],
+        input[type="number"],
+        input[type="datetime-local"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Styling for the submit button */
+        button {
+            width: 150px;
+            height: 34px;
+            background-color: #FA9884;
+            font-size: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f87a5f;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 1024px) {
+            .mean {
+                width: 90%;
+                margin: 40px auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .mean {
+                width: 95%;
+                margin: 30px auto;
+            }
+            
+            .text-style {
+                font-size: 18px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .mean {
+                width: 100%;
+                margin: 20px auto;
+            }
+            
+            .text-style {
+                font-size: 16px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            
+            input[type="text"],
+            input[type="number"],
+            input[type="datetime-local"] {
+                width: 100%;
+            }
+            
+            .phone-link {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .text-style {
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- Form container -->
     <form class="mean">
-        <fieldset style="background-color:#E9DAC1;"> <!-- Styling for the fieldset -->
-
+        <fieldset>
             <!-- Title -->
-            <h1
-                style="text-align: center; font-size:40px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:#9B4444 ;">
+            <h1 style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:#9B4444;">
                 <u><b>ORDER</b></u>
             </h1>
             <!-- Subtitle -->
-            <h2 style="font-size:20px;font-style: italic; color:#D04848; text-align: center;">If you have any
-                questions or
-                inquiries, please
-                feel free to contact us<br> using the number given below.</h2>
+            <h2 style="font-style: italic; color:#D04848; text-align: center;">If you have any questions or inquiries, please feel free to contact us<br> using the number given below.</h2>
 
             <!-- First Name input field -->
             <label class="text-style"><b>First Name: </b></label>
-            <input class="input-field" type="text" /> </br> </br>
+            <input class="input-field" type="text" required>
+
             <!-- Last Name input field -->
-            <label class="text-style"><b>Last Name :</b></label>
-            <input class="input-field" type="text" /> </br> </br>
+            <label class="text-style"><b>Last Name:</b></label>
+            <input class="input-field" type="text" required>
+
             <!-- Contact Number input field -->
-            <label class="text-style"><b>Contact Number:</b> </label>
-            <input class="input-field" type="number" /> </br></br>
+            <label class="text-style"><b>Contact Number:</b></label>
+            <input class="input-field" type="number" required>
+
             <!-- Address input fields -->
-            <label class="text-style" ;><b>Address:</b></label></label>
+            <label class="text-style"><b>Address:</b></label>
             <input type="text" id="street" name="street" placeholder="Street Address" required>
             <input type="text" id="city" name="city" placeholder="City" required>
-            <input type="text" id="state" name="state" placeholder="State/Province" required><br><br>
+            <input type="text" id="state" name="state" placeholder="State/Province" required>
             <input type="text" id="zip" name="zip" placeholder="Postal/ZIP Code" required>
-            <input type="text" id="country" name="country" placeholder="Country" required><br><br>
+            <input type="text" id="country" name="country" placeholder="Country" required>
+
             <!-- Preferred Date and Time input field -->
-            <label class="datetime" style="font-size: 20px;"><b>Preferred Date and Time:</b></label>
-            <input type="datetime-local" id="datetime" name="datetime" required><br><br>
+            <label class="text-style"><b>Preferred Date and Time:</b></label>
+            <input type="datetime-local" id="datetime" name="datetime" required>
+
             <!-- Quantity in kg input field -->
-            <label class="text-style"><b>Quantity :</b></label>
-            <input class="number" type="quantity" required></br></br>
+            <label class="text-style"><b>Quantity:</b></label>
+            <input class="number" type="number" required>
+
             <!-- Radio buttons for moongfalli type -->
-            <h2 style="text-align: left ; font-size:20px;"> <b>Moongfalli type</b></h2>
-            <input class="radio" type="radio" name="Runner" />
-            <label class="text-style"> Runner</label><br />
-            <input class="radio" type="radio" name="Virgin" />
-            <label class="text-style"> Virgin</label><br />
-            <input class="radio" type="radio" name="Valencia" />
-            <label class="text-style">Valencia</label><br />
-            <input class="radio" type="radio" name="Spanish" />
-            <label class="text-style"> Spanish</label><br />
-            <input class="radio" type="radio" name="Red peanut" />
-            <label class="text-style">Red peanut</label><br />
-            <input class="radio" type="radio" name="others" />
-            <label class="text-style">others</label><br /><br>
+            <h2 style="text-align: left; font-size:20px;"><b>Moongfalli type</b></h2>
+            <input class="radio" type="radio" name="peanutType" value="Runner" required>
+            <label class="text-style">Runner</label><br>
+            <input class="radio" type="radio" name="peanutType" value="Virgin">
+            <label class="text-style">Virgin</label><br>
+            <input class="radio" type="radio" name="peanutType" value="Valencia">
+            <label class="text-style">Valencia</label><br>
+            <input class="radio" type="radio" name="peanutType" value="Spanish">
+            <label class="text-style">Spanish</label><br>
+            <input class="radio" type="radio" name="peanutType" value="Red peanut">
+            <label class="text-style">Red peanut</label><br>
+            <input class="radio" type="radio" name="peanutType" value="Others">
+            <label class="text-style">Others</label><br><br>
 
-            <!--  phone number link -->
-            <a href="tel:+19545966656" class="phone-link">Call us: 9545966656 , 9545677856</a>
-
+            <!-- Submit button -->
+            <button type="submit">SUBMIT</button>
         </fieldset>
-        <!-- Submit button -->
-        <button style="width: 150px; height: 34px; background-color:#FA9884;font-size: 20px;">
-            SUBMIT
-        </button>
     </form>
-</body>
 
+    <!-- Phone number link -->
+    <a href="tel:+19545966656" class="phone-link">Call us: 9545966656, 9545677856</a>
+</body>
 </html>
