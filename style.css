@@ -987,7 +987,7 @@ section {
     flex-wrap: nowrap;
     gap: 20px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 300px;
 }
 
 .services1-list div {
@@ -1013,7 +1013,7 @@ section {
 }
 
 .services1-list div h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
     margin-bottom: 15px;
 }
