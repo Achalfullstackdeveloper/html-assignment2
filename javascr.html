@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="./images/iconindex.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+          background-color: rgb(235, 232, 229);
+            background-size: cover;
+            min-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color:black;
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+            color: #ffffff;
+            height: 70px;
+            width: 40%;
+            border-radius: 20px;
+            background-color: #fbf9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-container input[type="text"] {
+            width: 75%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            outline: none;
+            margin-right: 7px;
+        }
+
+        .container {
+            width: 90vw;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 31px var(--shadow-color);
+            background-color: #faf7f7;
+        }
+
+        .main-container {
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .main-container:hover {
+            transform: scale(1.05);
+        }
+
+        .main-container a {
+            text-decoration: none;
+            color: #0c0b0b;
+        }
+
+        .main-container h8,
+        .main-container h9,
+        .main-container h10,
+        .main-container h11,
+        .main-container h12,
+        .main-container h13,
+        .main-container h14,
+        .main-container h15 {
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .main-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        /* Style for the Previous button */
+        .previous-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #cb9743;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .previous-button:hover {
+            background-color: #a68232;
+        }
+
+        .previous-button span {
+            margin-right: 8px;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JAVASCRIPT</h1>
+    <div class="search-container">
+        <button class="previous-button" onclick="goBack()">
+            <span>&#9664;</span> Previous
+        </button>
+        <input type="text" id="searchInput" placeholder="Search projects..." class="search-input">
+    </div>
+    <div class="container" id="projectsContainer">
+
+        <div class="main-container" id="container8">
+            <a href="ui.html">
+                <h8>1. SAMPLE UI</h8>
+                <img src="https://static.vecteezy.com/system/resources/previews/004/592/314/original/numbers-and-mathematics-operations-seamless-pattern-arithmetic-background-illustration-vector.jpg"
+                    alt="Sample UI">
+            </a>
+        </div>
+        <div class="main-container" id="container9">
+            <a href="evenodd.html">
+                <h9>2. CHECK NUMBER</h9>
+                <img src="https://m.media-amazon.com/images/I/616Oay2pN8L._AC_UF1000,1000_QL80_.jpg" alt="Check Number">
+            </a>
+        </div>
+        <div class="main-container" id="container10">
+            <a href="eligible.html">
+                <h10>3. ELIGIBILITY</h10>
+                <img src="https://as2.ftcdn.net/v2/jpg/04/72/96/01/1000_F_472960132_3asVirEZP1fiGQxBTELo1ffMgH5bNiN6.jpg"
+                    alt="Eligibility">
+            </a>
+        </div>
+        <div class="main-container" id="container11">
+            <a href="ticket.html">
+                <h11>4. TICKET</h11>
+                <img src="https://m.media-amazon.com/images/I/713gv8lPupL._AC_UF1000,1000_QL80_.jpg" alt="Ticket">
+            </a>
+        </div>
+        <div class="main-container" id="container12">
+            <a href="vowel.html">
+                <h12>5. VOWELS</h12>
+                <img src="https://png.pngtree.com/png-clipart/20190115/ourmid/pngtree-3d-letters-english-alphabets-png-image_7750.jpg"
+                    alt="Vowels">
+            </a>
+        </div>
+        <div class="main-container" id="container13">
+            <a href="song.html">
+                <h13>6. MUSIC PLAYER</h13>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSb2lVRy3nmmt9N6i2dTiwwMYHuVhPwhQpoZkt2YZToUkSm25nVYl430bw4fH1BnfiP08&usqp=CAU"
+                    alt="MUSIC PLAYER">
+            </a>
+        </div>
+        <div class="main-container" id="container14">
+            <a href="largest.html">
+                <h14>7. LARGEST NUMBER</h14>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.XlDa5fIwAVxrg_WqZkDWbQHaHb&pid=Api&P=0&h=180" alt="LARGEST Number">
+            </a>
+        </div>
+        <div class="main-container" id="container15">
+            <a href="week.html">
+                <h15>8. WEEKS</h15>
+                <img src="https://png.pngtree.com/png-clipart/20211121/ourmid/pngtree-beautiful-handwritten-names-of-month-in-english-language-png-image_4037916.png"
+                    alt="week">
+            </a>
+        </div>
+        <div class="main-container" id="container16">
+            <a href="bill.html">
+                <h16>9. ELECTRICITY BILL</h16>
+                <img src="https://previews.123rf.com/images/jaaakworks/jaaakworks1601/jaaakworks160100008/50264100-cartoon-a-woman-and-bill-payment.jpg"
+                    alt="ELECTRICITY bill">
+            </a>
+        </div>
+        <div class="main-container" id="container17">
+            <a href="kbc.html">
+                <h17>10. KBC</h17>
+                <img src="https://m.economictimes.com/thumb/msid-109372444,width-1200,height-1200,resizemode-4,imgsize-1351385/kaun-banega-crorepati-host-amitabh-bachchan.jpg"
+                    alt="kbc">
+            </a>
+        </div>
+        <div class="main-container" id="container18">
+            <a href="brick.html">
+                <h18>11. BRICK</h18>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9DwKp3Rgo_2CkxUvBJbkcLXE5BjXH-SvtihGVOfZa6Ybc4jsJhRaUPSUJg6kun4tz4hQ&usqp=CAU"
+                    alt="BRICK">
+            </a>
+        </div>
+        <div class="main-container" id="container19">
+            <a href="enjoy.html">
+                <h19>12. SEARCH</h19>
+                <img src="https://ahrefs.com/blog/wp-content/uploads/2022/05/google-autocomplete-for-the-term-ahrefs.png"
+                    alt="search">
+            </a>
+        </div>
+        <div class="main-container" id="container20">
+            <a href="button.html">
+                <h20>13. BUTTONS</h20>
+                <img src="https://wallpapers.com/images/featured/information-technology-nucb4z97b3q78mjk.jpg" alt="BUTTONS">
+            </a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('searchInput').addEventListener('input', function () {
+                let filter = this.value.toUpperCase();
+                let projects = document.getElementById('projectsContainer').getElementsByClassName('main-container');
+
+                for (let i = 0; i < projects.length; i++) {
+                    let title = projects[i].querySelector('h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20');
+                    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                        projects[i].style.display = "";
+                    } else {
+                        projects[i].style.display = "none";
+                    }
+                }
+            });
+        });
+        
+        function goBack() {
+            window.location.href = 'javascr.html'; // Replace 'index.html' with the path to your home page
+        }
+
+        document.getElementById('searchInput').addEventListener('input', function () {
+            let filter = this.value.toUpperCase();
+            let projects = document.getElementById('projectsContainer').getElementsByClassName('main-container');
+
+            for (let i = 0; i < projects.length; i++) {
+                let title = projects[i].getElementsByTagName("h2")[0] || projects[i].getElementsByTagName("h3")[0] || projects[i].getElementsByTagName("h4")[0] || projects[i].getElementsByTagName("h5")[0] || projects[i].getElementsByTagName("h6")[0];
+                if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                    projects[i].style.display = "";
+                } else {
+                    projects[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+   
+</body>
+
+</html>
