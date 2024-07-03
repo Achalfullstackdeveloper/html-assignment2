@@ -148,6 +148,53 @@
         .previous-button span {
             margin-right: 8px;
         }
+         @media screen and (max-width: 768px) {
+            .search-container {
+                width: 80%;
+                margin: 20px auto;
+                height: auto;
+                display: block;
+            }
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .search-container input[type="text"] {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .previous-button {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                font-size: 14px;
+                height: auto;
+            }
+        }
+
+        /* Media query for even smaller screens */
+        @media screen and (max-width: 480px) {
+            .search-container {
+                width: 90%;
+                margin: 10px auto;
+                height: auto;
+                display: block;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .search-container input[type="text"] {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .previous-button {
+                padding: 8px 16px;
+                font-size: 12px;
+                height: auto;
+            }
+        }
+
     </style>
 </head>
 
