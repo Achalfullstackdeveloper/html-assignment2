@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        /* Global styles */
+        body {
+            background-image: url("https://st2.depositphotos.com/1021722/7053/i/450/depositphotos_70531635-stock-photo-art-spring-flowers-frame-background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main container styles */
+        .main-container {
+            width: 90%;
+            max-width: 580px;
+            background-color: #2D9596;
+            border: 2px solid cadetblue;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top section styles */
+        .top {
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+            background-color: #944E63;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* Bottom section styles */
+        .bottom {
+            width: 100%;
+            padding: 20px;
+            background-color: #FFE7E7;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* Input field styles */
+        .container {
+            width: calc(100% - 20px);
+            height: 30px;
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        /* Button row styles */
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* Button styles */
+        button {
+            width: 90px;
+            height: 50px;
+            margin: 5px;
+            font-size: 24px;
+            background-color: #AE445A;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darksalmon;
+        }
+
+        /* Display styles */
+        #display {
+            width: 100%;
+            font-size: 20px;
+            text-align: right;
+            margin: 0;
+            color: black;
+        }
+
+        /* Media query for screens smaller than 768px */
+        @media screen and (max-width: 768px) {
+            .main-container {
+                width: 95%;
+            }
+
+            button {
+                width: 70px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        /* Media query for screens smaller than 480px */
+        @media screen and (max-width: 480px) {
+            .main-container {
+                width: 100%;
+            }
+
+            button {
+                width: 60px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            .container {
+                font-size: 14px;
+            }
+
+            #display {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main container -->
+    <div class="main-container">
+        <!-- Top section for display -->
+        <div class="top">
+            <h1 id="display"></h1>
+        </div>
+        <!-- Bottom section for inputs and buttons -->
+        <div class="bottom">
+            <!-- Input fields -->
+            <input id="number-one" class="container" placeholder="Enter first number" type="number">
+            <input id="number-two" class="container" placeholder="Enter second number" type="number">
+
+            <!-- Calculator buttons -->
+            <div class="row">
+                <button id="Ac" type="button" onclick="clearFunction()">AC</button>
+                <button id="mul" type="button" onclick="mul()">x</button>
+            </div>
+            <div class="row">
+                <button id="add" type="button" onclick="add()">+</button>
+                <button id="sub" type="button" onclick="sub()">-</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to add two numbers
+        function add() {
+            let firstNo = document.getElementById("number-one").value;
+            let secondNo = document.getElementById("number-two").value;
+            let total = Number(firstNo) + Number(secondNo);
+            document.getElementById("display").innerHTML = "The Result is: " + total;
+        }
+
+        // Function to subtract two numbers
+        function sub() {
+            let firstNo = document.getElementById("number-one").value;
+            let secondNo = document.getElementById("number-two").value;
+            let total = Number(firstNo) - Number(secondNo);
+            document.getElementById("display").innerHTML = "The Result is: " + total;
+        }
+
+        // Function to multiply two numbers
+        function mul() {
+            let firstNo = document.getElementById("number-one").value;
+            let secondNo = document.getElementById("number-two").value;
+            let total = Number(firstNo) * Number(secondNo);
+            document.getElementById("display").innerHTML = "The Result is: " + total;
+        }
+
+        // Function to clear the display
+        function clearFunction() {
+            document.getElementById("display").innerHTML = "";
+            document.getElementById("number-one").value = "";
+            document.getElementById("number-two").value = "";
+        }
+    </script>
+</body>
+
+</html>

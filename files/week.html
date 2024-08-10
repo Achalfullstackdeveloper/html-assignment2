@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekday Selector</title>
+    <style>
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7-JtN_lRqa2moFpER1tJxO2f6gCfvSXMB_A&s");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        input {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        /** Styling for the main-container **/
+        .main-container {
+            width: 90vw;
+            max-width: 400px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /** Styling for the top section **/
+        .top {
+            width: 100%;
+            text-align: center;
+        }
+
+        /** Styling for the bottom section **/
+        .bottom {
+            width: 100%;
+            text-align: center;
+        }
+
+        /** Styling for rows of buttons **/
+        .row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /** Styling for buttons **/
+        button {
+            width: 100%;
+            max-width: 150px;
+            height: 50px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        /** Styling for button hover **/
+        button:hover {
+            background-color: #ce7a13;
+        }
+
+        /** Styling for operator buttons **/
+        .operation {
+            background-color: #FFE3CA;
+        }
+
+        /** Styling for display **/
+        .display {
+            font-size: 24px;
+            margin: 20px 0;
+            word-wrap: break-word;
+        }
+
+        /** Styling for input field **/
+        .input-field {
+            width: 100%;
+            max-width: 200px;
+            height: 35px;
+            font-size: 18px;
+            margin: 20px 0;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /** Media queries for responsiveness **/
+        @media (max-width: 1200px) {
+            .main-container {
+                width: 70vw;
+                padding: 15px;
+            }
+
+            button {
+                max-width: 120px;
+                font-size: 14px;
+            }
+
+            .input-field {
+                max-width: 180px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                width: 90vw;
+                padding: 10px;
+            }
+
+            button {
+                max-width: 100px;
+                font-size: 12px;
+            }
+
+            .input-field {
+                max-width: 160px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            button {
+                max-width: 80px;
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
+            .input-field {
+                max-width: 140px;
+                font-size: 12px;
+            }
+
+            .display {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <script>
+        function showDay() {
+            var x = document.getElementById('x').value;
+            var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            var selectedDay = days[x - 1];
+            if (selectedDay) {
+                document.getElementById('display').innerText = 'Day IS: ' + selectedDay;
+            } else {
+                document.getElementById('display').innerText = 'Please enter a number between 1 and 7.';
+            }
+        }
+
+        function clearFunction() {
+            document.getElementById('x').value = '';
+            document.getElementById('display').innerText = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- top -->
+        <div class="top">
+            <input class="input-field" type="number" id="x" placeholder="ENTER A NUMBER" />
+            <div class="row">
+                <button id="Ac" type="button" class="operation" onclick="clearFunction()">CLEAR</button>
+                <button id="submit" type="button" class="operation" onclick="showDay()">CHECK</button>
+            </div>
+        </div>
+        <!--bottom-->
+        <div class="bottom">
+            <h1 id="display" class="display"></h1>
+        </div>
+    </div>
+</body>
+
+</html>

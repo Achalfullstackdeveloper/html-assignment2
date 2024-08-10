@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENJOY</title>
+    <link rel="icon" type="image/x-icon" href="enjoy.png">
+    <style>
+        /* styling for background image */
+        body {
+            background-image: url("https://img.freepik.com/free-vector/gradient-minimalist-background_23-2150012317.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        /* styling for main section */
+        .main {
+            border-style: solid;
+            color: #171616;
+            height: auto;
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            box-shadow: 0px 0px 31px white;
+            padding: 20px;
+            position: relative;
+        }
+        /* styling for container*/
+        .container {
+            width: 100%;
+            max-width: 800px;
+            height: 40px;
+            margin: 40px auto 0;
+            display: block;
+        }
+        /* styling for placeholder */
+        .container::placeholder {
+            color: gray;
+            font-style: italic;
+            font-size: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-align: left;
+            color:#171616;
+            font-size: 60px;
+            margin-top: 70px;
+            margin-left: 0;
+        }
+        .image-container {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+        .image-container img {
+            height: 200px;
+            width: 200px;
+        }
+        /* styling for button */
+        .operation {
+            margin: 20px auto;
+            height: 50px;
+            width: 300px;
+            display: block;
+            font-size: 20px;
+            background-color: antiquewhite;
+        }
+        /* styling for result*/
+        #results {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        /* Media query for tablets */
+        @media screen and (max-width: 768px) {
+            .main {
+                width: 95%;
+                margin: 30px auto;
+            }
+            h1 {
+                font-size: 40px;
+                margin-top: 50px;
+            }
+            .image-container img {
+                height: 150px;
+                width: 150px;
+            }
+            .operation {
+                width: 80%;
+                max-width: 300px;
+            }
+            #results {
+                font-size: 40px;
+            }
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 480px) {
+            .main {
+                margin: 20px auto;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 30px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            .image-container {
+                position: static;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .image-container img {
+                height: 100px;
+                width: 100px;
+            }
+            .container {
+                height: 30px;
+                font-size: 16px;
+            }
+            .operation {
+                height: 40px;
+                font-size: 16px;
+            }
+            #results {
+                font-size: 30px;
+            }
+        }
+    </style>
+    <script>
+        //function search
+        function search() {
+            let input = document.getElementById("number-one").value.toLowerCase();
+            let results = document.getElementById("results");
+            // Array containing student names
+            let studentNames = [
+                "ayush lolusare",
+                "himanshu",
+                "yash",
+                "ayush nakade",
+                "Samiksha",
+                "ketki",
+                "Divyanshu",
+                "nikhil",
+                "puja",
+                "artharv",
+                "achal",
+                "yogesh sir"
+            ];
+            // Check if the input matches any student name
+            if (studentNames.includes(input)) {
+                // If the name is found, display  student is found
+                results.innerText = "Student found: " + input;
+            } else {
+                // If the name is not found, display student is not found
+                results.innerText = "Student not found: " + input;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--main section-->
+    <div class="main">
+        <h1>ENJOY<br>PROGRAMMING</h1>
+        <!--image section-->
+        <div class="image-container">
+            <img src="C:\Users\patil\OneDrive\ドキュメント\projectachal\images\enjoyicon.png" alt="Enjoy icon">
+        </div>
+        <!--top section-->
+        <div class="top">
+            <input id="number-one" class="container" placeholder="TYPE HERE .......">
+        </div>
+        <button id="submit" type="button" class="operation" onclick="search()">search</button>
+        <!-- Display result  -->
+        <div id="results"></div>
+    </div>
+</body>
+</html>
